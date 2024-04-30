@@ -41,7 +41,7 @@ async def reverseImageSearch(_: Client,m: t.Message):
             return await m.reply_text(message,reply_markup=btn)
         message ="\n".join([f"{index+1}. {name}" for index, name in enumerate(output['content']['bestResults']['names'])])
         await reply.delete()
-        await m.reply_text(f"{message}\n\nBy @LexicaAPI",reply_markup=btn)
+        await m.reply_text(f"{message}\n\nBy @GojoAiBot",reply_markup=btn)
     except Exception as E:
         traceback.print_exc()
         return await m.reply_text("Ran into an error.")
